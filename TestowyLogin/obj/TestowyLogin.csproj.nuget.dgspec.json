@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\TestowyLogin\\skincaretest\\TestowyLogin\\TestowyLogin.csproj": {}
+    "C:\\Projects\\skincaretest\\TestowyLogin\\TestowyLogin.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\TestowyLogin\\skincaretest\\TestowyLogin\\TestowyLogin.csproj": {
+    "C:\\Projects\\skincaretest\\TestowyLogin\\TestowyLogin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\TestowyLogin\\skincaretest\\TestowyLogin\\TestowyLogin.csproj",
+        "projectUniqueName": "C:\\Projects\\skincaretest\\TestowyLogin\\TestowyLogin.csproj",
         "projectName": "TestowyLogin",
-        "projectPath": "C:\\Projects\\TestowyLogin\\skincaretest\\TestowyLogin\\TestowyLogin.csproj",
+        "projectPath": "C:\\Projects\\skincaretest\\TestowyLogin\\TestowyLogin.csproj",
         "packagesPath": "C:\\Users\\karol\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\TestowyLogin\\skincaretest\\TestowyLogin\\obj\\",
+        "outputPath": "C:\\Projects\\skincaretest\\TestowyLogin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\karol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.1, )"
+            },
             "Microsoft.AspNetCore.Authentication": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -56,6 +64,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.25.0, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[5.3.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -1,0 +1,238 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\skincaretest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\models\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\models\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\middleware\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\middleware\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\models\\validators\\registeruserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\models\\validators\\registeruserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\database\\databasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\database\\databasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|c:\\projects\\skincaretest\\testowylogin\\nlog.config||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5CA6077E-825E-45C5-9FD2-828BEE5DE856}|TestowyLogin\\TestowyLogin.csproj|solutionrelative:testowylogin\\nlog.config||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Program.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Program.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Program.cs",
+              "RelativeToolTip": "TestowyLogin\\Program.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAADwv08AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T21:52:14.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterUserDto.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Models\\RegisterUserDto.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Models\\RegisterUserDto.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Models\\RegisterUserDto.cs",
+              "RelativeToolTip": "TestowyLogin\\Models\\RegisterUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T21:01:49.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Controllers\\UserController.cs",
+              "RelativeToolTip": "TestowyLogin\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T21:57:16.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BadRequestException.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Exceptions\\BadRequestException.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Exceptions\\BadRequestException.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Exceptions\\BadRequestException.cs",
+              "RelativeToolTip": "TestowyLogin\\Exceptions\\BadRequestException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T16:07:24.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Middleware\\ErrorHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Middleware\\ErrorHandlingMiddleware.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Middleware\\ErrorHandlingMiddleware.cs",
+              "RelativeToolTip": "TestowyLogin\\Middleware\\ErrorHandlingMiddleware.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAmwBYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:02:54.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Services\\UserService.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Services\\UserService.cs",
+              "RelativeToolTip": "TestowyLogin\\Services\\UserService.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAYwEsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T21:34:16.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Models\\LoginDto.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Models\\LoginDto.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Models\\LoginDto.cs",
+              "RelativeToolTip": "TestowyLogin\\Models\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T20:50:52.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterUserDtoValidator.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Models\\Validators\\RegisterUserDtoValidator.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Models\\Validators\\RegisterUserDtoValidator.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Models\\Validators\\RegisterUserDtoValidator.cs",
+              "RelativeToolTip": "TestowyLogin\\Models\\Validators\\RegisterUserDtoValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:38:12.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "TestowyLogin\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:22:58.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DatabaseSettings.cs",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\Database\\DatabaseSettings.cs",
+              "RelativeDocumentMoniker": "TestowyLogin\\Database\\DatabaseSettings.cs",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\Database\\DatabaseSettings.cs",
+              "RelativeToolTip": "TestowyLogin\\Database\\DatabaseSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:10:12.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "nlog.config",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\nlog.config",
+              "RelativeDocumentMoniker": "TestowyLogin\\nlog.config",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\nlog.config",
+              "RelativeToolTip": "TestowyLogin\\nlog.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-02T22:25:47.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\appsettings.json",
+              "RelativeDocumentMoniker": "TestowyLogin\\appsettings.json",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\appsettings.json",
+              "RelativeToolTip": "TestowyLogin\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-23T21:48:18.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "nlog.config",
+              "DocumentMoniker": "C:\\Projects\\skincaretest\\TestowyLogin\\nlog.config",
+              "RelativeDocumentMoniker": "TestowyLogin\\nlog.config",
+              "ToolTip": "C:\\Projects\\skincaretest\\TestowyLogin\\nlog.config",
+              "RelativeToolTip": "TestowyLogin\\nlog.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-02T22:11:00.469Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

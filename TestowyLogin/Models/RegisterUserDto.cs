@@ -7,7 +7,9 @@ namespace TestowyLogin.Models
     {
 
         public string Name { get; set; }
+
         public string Email { get; set; }
+
         public string Password { get; set; }
 
         [Compare(nameof(Password), ErrorMessage = "Passwords do not match!")] //jakis komunikat lepszy?

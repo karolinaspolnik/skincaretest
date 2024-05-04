@@ -5,20 +5,21 @@ using TestowyLogin.Services;
 
 namespace TestowyLogin.Controllers
 {
-    //[Authorize]
     [Route("api/account")]
-    [ApiController]
-    public class UserController :Controller
+    [ApiController] //odpowiada za walidacje modelu i zwracanie bledow walidacji
+    public class UserController : Controller
     {
-        private readonly UserService _service;
 
-        public UserController(UserService service)
+        private readonly IUserService _service;
+        public UserController(IUserService service) 
         {
             _service = service;
+            
         }
 
         [HttpGet]
         [Route("getusers")]
+        [Authorize]
         public ActionResult<List<User>> GetUsers()
         {
             return _service.GetUsers();
@@ -38,6 +39,7 @@ namespace TestowyLogin.Controllers
         [Route("login")]
         public ActionResult Login([FromBody] LoginDto dto)
         {
+
             string token = _service.GenerateJwt(dto);
             return Ok(token);
         }

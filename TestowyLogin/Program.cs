@@ -1,22 +1,35 @@
 using System.Text;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using TestowyLogin;
 using TestowyLogin.Database;
+using NLog;
+using NLog.Web;
+using TestowyLogin.Middleware;
 using TestowyLogin.Models;
+using TestowyLogin.Models.Validators;
 using TestowyLogin.Services;
 
-var builder = WebApplication.CreateBuilder(args);
+    var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+    logger.Debug("init main");
 
-var authenticationSettings = new AuthenticationSettings();
-builder.Configuration.GetSection("Authentication").Bind(authenticationSettings);
+    var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
-builder.Services.AddSingleton(authenticationSettings);
-builder.Services.AddAuthentication(option =>
+    builder.Logging.ClearProviders(); //NLog: Setup NLog for dependency injection
+    builder.Host.UseNLog();
+
+    var authenticationSettings = new AuthenticationSettings();
+    builder.Configuration.GetSection("Authentication").Bind(authenticationSettings);
+
+    // Add services to the container.
+    builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("SkinCareDataBase")); //database
+    builder.Services.AddSingleton(authenticationSettings);
+    builder.Services.AddAuthentication(option =>
     {
         option.DefaultAuthenticateScheme = "Bearer";
         option.DefaultScheme = "Bearer";
@@ -34,52 +47,37 @@ builder.Services.AddAuthentication(option =>
                 new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSettings.JwtKey))
         };
     });
+    builder.Services.AddControllers();
+    builder.Services.AddFluentValidationAutoValidation(); //validation
+    builder.Services.AddFluentValidationClientsideAdapters();
+    builder.Services.AddValidatorsFromAssemblyContaining<RegisterUserDtoValidator>();
+    ValidatorOptions.Global.LanguageManager.Enabled = false; //zeby nie tlumaczylo komunikatow na polski
+    builder.Services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
 
-
-builder.Services.AddScoped<UserService>();
-builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
-builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection(nameof(DatabaseSettings)));
-
-///////
-//var mongoDbSettings = builder.Configuration.GetSection(nameof(MongoDbConfig)).Get<MongoDbConfig>();
-// dodany plik mongodbconfig i ustawienia mongo w json s¹ dodatkowe,
-// dodac na gita dzialajace i sprawdzic czy tamto nie bedzie lepsze, zobaczyc w jaki sposob ten chlop dodaje
-//przy rejestracji nie sprawdza czy juz istnieje
-
-
-
-
-
+    builder.Services.AddScoped<IUserService, UserService>(); //kazdy obiekt bedzie tworzony na nowo przy nowym zapytaniu wyslanym przez kleinta
+    builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+    builder.Services.AddScoped<ErrorHandlingMiddleware>(); //middleware
+    
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
 
 
 
+    var app = builder.Build();
 
-builder.Services.AddControllers();
-
-
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-
-builder.Services.AddSingleton<IDatabaseSettings>(db => db.GetRequiredService<IOptions<DatabaseSettings>>().Value);
-
-var app = builder.Build();
+    app.UseMiddleware<ErrorHandlingMiddleware>();
+    app.UseAuthentication();
+    app.UseHttpsRedirection();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
 
-app.UseAuthentication();
-app.UseHttpsRedirection();
+    app.UseRouting();
+    app.UseAuthorization();
+    app.MapControllers();
+    app.Run();
 
-app.UseAuthorization();
-
-
-app.MapControllers();
-
-app.Run();
