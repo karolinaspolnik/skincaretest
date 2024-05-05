@@ -11,6 +11,7 @@ using NLog;
 using NLog.Web;
 using TestowyLogin.Middleware;
 using TestowyLogin.Models;
+using TestowyLogin.Models.QuizModel;
 using TestowyLogin.Models.Validators;
 using TestowyLogin.Services;
 
@@ -28,6 +29,10 @@ using TestowyLogin.Services;
 
     // Add services to the container.
     builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("SkinCareDataBase")); //database
+    builder.Services.AddSingleton<DataInitializerService>();
+    
+
+
     builder.Services.AddSingleton(authenticationSettings);
     builder.Services.AddAuthentication(option =>
     {
@@ -48,13 +53,15 @@ using TestowyLogin.Services;
         };
     });
     builder.Services.AddControllers();
-    builder.Services.AddFluentValidationAutoValidation(); //validation
+
+    builder.Services.AddFluentValidationAutoValidation();
     builder.Services.AddFluentValidationClientsideAdapters();
-    builder.Services.AddValidatorsFromAssemblyContaining<RegisterUserDtoValidator>();
     ValidatorOptions.Global.LanguageManager.Enabled = false; //zeby nie tlumaczylo komunikatow na polski
     builder.Services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
+    builder.Services.AddScoped<IValidator<UserAnswerDto>, UserAnswerDtoValidator>();////////////
 
     builder.Services.AddScoped<IUserService, UserService>(); //kazdy obiekt bedzie tworzony na nowo przy nowym zapytaniu wyslanym przez kleinta
+    builder.Services.AddScoped<IQuizService, QuizService>();
     builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
     builder.Services.AddScoped<ErrorHandlingMiddleware>(); //middleware
     
@@ -64,6 +71,9 @@ using TestowyLogin.Services;
 
 
     var app = builder.Build();
+
+    var dataInitializerService = app.Services.GetRequiredService<DataInitializerService>();
+    dataInitializerService.InitializeData();
 
     app.UseMiddleware<ErrorHandlingMiddleware>();
     app.UseAuthentication();
@@ -80,4 +90,5 @@ using TestowyLogin.Services;
     app.UseAuthorization();
     app.MapControllers();
     app.Run();
+
 

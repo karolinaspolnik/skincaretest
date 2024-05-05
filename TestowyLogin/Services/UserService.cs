@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
@@ -23,7 +24,7 @@ namespace TestowyLogin.Services
 
     public class UserService : IUserService
     {
-        private readonly IMongoCollection<User> users; //database
+        private readonly IMongoCollection<User> _users;
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly ILogger<UserService> _logger;
         private readonly AuthenticationSettings _authenticationSettings;
@@ -36,14 +37,12 @@ namespace TestowyLogin.Services
 
             var client = new MongoClient(skinCareDatabaseSettings.Value.ConnectionString);
             var database = client.GetDatabase(skinCareDatabaseSettings.Value.DatabaseName);
-            users = database.GetCollection<User>(skinCareDatabaseSettings.Value.UsersCollectionName);
-
-
+            _users = database.GetCollection<User>(skinCareDatabaseSettings.Value.UsersCollectionName);
         }
 
-        public List<User> GetUsers() => users.Find(user => true).ToList();
+        public List<User> GetUsers() => _users.Find(user => true).ToList();
 
-        public void RegisterUser(RegisterUserDto dto) //data transfer object
+        public void RegisterUser([FromBody]RegisterUserDto dto) //data transfer object
         {
             _logger.LogError($"User with email: {dto.Email} CREATE action invoked");
             var newUser = new User()
@@ -53,13 +52,13 @@ namespace TestowyLogin.Services
             };
             var hashedPassword = _passwordHasher.HashPassword(newUser, dto.Password);
             newUser.PasswordHash = hashedPassword;
-            users.InsertOne(newUser);
+            _users.InsertOne(newUser);
         }
 
 
         public string GenerateJwt(LoginDto dto)
         {
-            var user = this.users.Find(user => user.Email == dto.Email).FirstOrDefault();
+            var user = this._users.Find(user => user.Email == dto.Email).FirstOrDefault();
             if (user == null)
             {
                 throw new BadRequestException("Invalid username or password");

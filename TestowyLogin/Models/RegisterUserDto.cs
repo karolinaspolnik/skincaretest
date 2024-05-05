@@ -12,7 +12,6 @@ namespace TestowyLogin.Models
 
         public string Password { get; set; }
 
-        [Compare(nameof(Password), ErrorMessage = "Passwords do not match!")] //jakis komunikat lepszy?
         public string ConfirmPassword { get; set; }
 
     }
